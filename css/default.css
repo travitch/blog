@@ -1,0 +1,54 @@
+
+/*
+   Do not decorate list items in the post listings
+*/
+ul.post-list {
+    list-style-type: none
+}
+
+.post-item {
+    width: 6in;
+    overflow: auto;
+    margin: 20px 20px 50px 20px;
+}
+
+.about {
+    width: 6in;
+    margin: 20px 20px 50px 20px;
+}
+
+.post-date {
+    font-style: italic
+}
+
+.post-tags {
+    float: right
+}
+
+#disqus_thread {
+    margin-left: 1in
+}
+
+#menu {
+    position: fixed;
+    right: 0;
+}
+
+#menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+#menu li {
+    padding-right: 1em;
+}
+
+#tag-list {
+    float: right;
+    width: 2in;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
