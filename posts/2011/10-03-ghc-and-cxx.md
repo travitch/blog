@@ -4,9 +4,9 @@ tags: haskell, programming, c++
 ---
 
 Recently I was getting error messages from GHC while building Haskell
-programs that complain about unknown symbols that look like
-`_ZNSt3tr110_HashtableIPKN4llvm6MDNodeESt4pairIKS4_P7CMeta_tESaIS9_ESt10_Select1stIS9_ESt8equal_toIS4_ENS_4hashIS4_EENS_8__detail18_Mod_range_hashingENSH_20_Default_ranged_hashENSH_20_Prime_rehash_policyELb0ELb0ELb1EED2Ev`.
-It turns out that these are weak symbols and telling ghc to pass the
+programs that complain about unknown symbols referring to C++ standard
+template library symbols.  It turns out that these are weak symbols
+(since only one definition is required) and telling ghc to pass the
 extra (forbidden, deprecated, and evil) `-fno-weak` flag to gcc helps.
 I guess I am in trouble when this flag is finally removed.
 

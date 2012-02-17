@@ -8,8 +8,24 @@ ul.post-list {
 
 .post-item {
     max-width: 6in;
-    overflow: auto;
     margin: 20px 20px 50px 20px;
+    border-bottom: thin dashed #C2C2D6;
+}
+
+.post-content h1 {
+    font-size: 1.5em;
+}
+
+.post-content h2 {
+    font-size: 1.25em;
+}
+
+.post-content h3 {
+    font-size: 1.1em;
+}
+
+.comment-span {
+    margin-bottom: 20px;
 }
 
 .about {
@@ -19,6 +35,11 @@ ul.post-list {
 
 .post-date {
     font-style: italic
+}
+
+.post-meta {
+    font-style: italic;
+    font-size: 0.75em;
 }
 
 .post-tags {
