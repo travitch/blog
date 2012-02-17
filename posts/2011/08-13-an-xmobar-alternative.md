@@ -35,3 +35,8 @@ build failed, so the documentation is temporarily
 [elsewhere](http://pages.cs.wisc.edu/~travitch/taffybar) until I figure out
 how to make hackage happy.  The installation goes fine on the machines
 I've tried it on.
+
+### Update (2012-02-17)
+
+It looks like the
+[documentation finally builds on hackage](http://hackage.haskell.org/package/taffybar).
