@@ -67,7 +67,7 @@ ul.post-list {
     padding-right: 1em;
 }
 
-#tag-list {
+#archive-link {
     float: right;
     width: 2in;
     position: fixed;
@@ -75,4 +75,15 @@ ul.post-list {
     bottom: 0;
     padding-right: 1em;
     padding-bottom: 1em;
+}
+
+#archive-link ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: right
+}
+
+#tag-cloud {
+    width: 4in
 }

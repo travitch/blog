@@ -40,9 +40,17 @@ main = hakyll $ do
   match "index.html" $ route idRoute
   create "index.html" $ constA mempty
     >>> arr (setField "title" "Tristan.Blog")
-    >>> requireA "tags" (setFieldA "taglist" renderTagList')
     >>> setFieldPageList (take 5 . reverse . postOrder) "templates/postitem.html" "posts" "posts/*/*.md"
     >>> applyTemplateCompiler "templates/index.html"
+    >>> applyTemplateCompiler "templates/default.html"
+    >>> relativizeUrlsCompiler
+
+  match "archive.html" $ route idRoute
+  create "archive.html" $ constA mempty
+    >>> arr (setField "title" "Archive")
+    >>> requireA "tags" (setFieldA "tagcloud" renderTagCloud')
+    >>> requireAllA "posts/*/*.md" (addPostList "templates/post-summary.html")
+    >>> applyTemplateCompiler "templates/archive.html"
     >>> applyTemplateCompiler "templates/default.html"
     >>> relativizeUrlsCompiler
 
@@ -75,8 +83,8 @@ main = hakyll $ do
 
   return ()
 
-renderTagList' :: Compiler (Tags String) String
-renderTagList' = renderTagList tagIdentifier
+renderTagCloud' :: Compiler (Tags String) String
+renderTagCloud' = renderTagCloud tagIdentifier 75 400
 
 tagIdentifier :: String -> Identifier a
 tagIdentifier = fromCapture "tags/*"
@@ -84,9 +92,9 @@ tagIdentifier = fromCapture "tags/*"
 -- | Auxiliary compiler: generate a post list from a list of given posts, and
 -- add it to the current page under @$posts@
 --
-addPostList :: Compiler (Page String, [Page String]) (Page String)
-addPostList = setFieldA "posts" $ arr (reverse . postOrder)
-  >>> require "templates/postitem.html" (\p t -> map (applyTemplate t) p)
+addPostList :: Identifier Template -> Compiler (Page String, [Page String]) (Page String)
+addPostList tpl = setFieldA "posts" $ arr (reverse . postOrder)
+  >>> require tpl (\p t -> map (applyTemplate t) p)
   >>> arr mconcat
   >>> arr pageBody
 
@@ -95,8 +103,8 @@ makeTagList :: String
                -> Compiler () (Page String)
 makeTagList tag posts =
   constA (mempty, posts)
-    >>> addPostList
-    >>> requireA "tags" (setFieldA "taglist" renderTagList')
+    >>> addPostList "templates/post-summary.html"
+    >>> requireA "tags" (setFieldA "taglist" renderTagCloud')
     >>> arr (setField "title" ("Posts tagged &#8216;" ++ tag ++ "&#8217;"))
     >>> applyTemplateCompiler "templates/index.html"
     >>> applyTemplateCompiler "templates/default.html"
