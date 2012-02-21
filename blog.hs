@@ -62,7 +62,7 @@ main = hakyll $ do
   match "posts/*/*.md" $ do
     route $ setExtension "html"
     compile $ pageCompiler
-      >>> arr (customRenderDateField "date" "%B %e, %Y" "unknown")
+      >>> arr (customRenderDateField "published" "%B %e, %Y" "unknown")
       >>> renderTagsField "prettytags" tagIdentifier
       >>> arr (copyBodyToField "contents")
       >>> arr (copyBodyToField "description")
