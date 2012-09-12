@@ -60,7 +60,7 @@ necessary.  It does not spawn any external processes.  It has a silly
 gimmick: if a notification is longer than some (configurable)
 threshold, it will scroll around in the style of Winamp 2.x
 
-The source of [the plugin]($contentRoot$/NotificationDaemon.hs) is released here
+The source of [the plugin](https://gist.github.com/3707046) is released here
 under whatever license is required to use it with xmobar and
 dbus-client.  I think dbus-client is GPL3.  I might put this into a
 repository somewhere at some point.
