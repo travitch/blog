@@ -22,7 +22,7 @@ in a new buffer, activates the
 [llvm major mode](https://llvm.org/viewvc/llvm-project/llvm/trunk/utils/emacs/llvm-mode.el),
 and switches to the new buffer.
 
-~~~~~{.lisp}
+~~~~~{.commonlisp}
 (defun llvmize (&optional start end)
   "Convert the current buffer or region (containing C code) to LLVM assembly via clang and opt"
   (interactive)
