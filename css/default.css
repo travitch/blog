@@ -1,9 +1,16 @@
-
 /*
    Do not decorate list items in the post listings
 */
 ul.post-list {
     list-style-type: none
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 .post-item {
@@ -86,4 +93,17 @@ ul.post-list {
 
 #tag-cloud {
     width: 4in
+}
+
+.post-item-title > a {
+    color: black;
+}
+
+.post-item-title > a:hover {
+    text-decoration: none;
+}
+
+.post-date, .post-tags, .post-tags > a {
+    color: #aaaaaa;
+    text-decoration: none;
 }
