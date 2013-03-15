@@ -59,19 +59,21 @@ a:hover {
 }
 
 #menu {
-    position: fixed;
-    right: 0;
+  margin: 20px;
 }
 
 #menu ul {
     list-style-type: none;
+    display: inline;
     padding: 0;
     margin: 0;
-    text-align: right;
+/*    text-align: right;*/
 }
 
 #menu li {
-    padding-right: 1em;
+  list-style-type: none;
+  display: inline;
+  padding-right: 1em;
 }
 
 #archive-link {
