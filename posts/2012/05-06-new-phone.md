@@ -1,6 +1,7 @@
 ---
 title: New Phone Time
 tags: gadgets
+date: 2012-05-06
 ---
 
 I have been using a Palm Pre (Plus) for a while.  It is a great

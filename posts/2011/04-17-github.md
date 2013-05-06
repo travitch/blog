@@ -1,6 +1,7 @@
 ---
 title: Github
 tags: programming
+date: 2011-04-17
 ---
 
 Today I finally decided to stop hosting my own git repositories and

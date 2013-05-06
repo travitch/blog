@@ -1,6 +1,7 @@
 ---
 title: Parsing in Python
 tags: python, programming
+date: 2010-06-10
 ---
 
 I recently had to do some simple parsing in Python.  Aside: the Python

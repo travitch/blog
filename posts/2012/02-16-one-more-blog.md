@@ -1,6 +1,7 @@
 ---
 title: One More Blog
 tags: haskell
+date: 2012-02-16
 ---
 
 Another year, another blog.  It seems that I just re-wrote my blog for

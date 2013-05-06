@@ -1,6 +1,7 @@
 ---
 title: Divide and Conquer with Monad Par
 tags: haskell, programming
+date: 2012-11-15
 ---
 
 Recently I decided to parallelize part of my set constraint solver

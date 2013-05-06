@@ -1,6 +1,7 @@
 ---
 title: Libtool Annoyances
 tags: linux
+date: 2012-02-28
 ---
 
 I have a set of scripts

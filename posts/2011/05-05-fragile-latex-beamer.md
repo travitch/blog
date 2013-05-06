@@ -1,6 +1,7 @@
 ---
 title: Fragile LaTeX Beamer Slides
 tags: tex
+date: 2011-05-05
 ---
 
 I am currently working on the talk slides for my thesis proposal.  My

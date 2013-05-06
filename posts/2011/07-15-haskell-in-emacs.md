@@ -1,6 +1,7 @@
 ---
 title: Haskell in Emacs
 tags: haskell, programming, emacs
+date: 2011-07-15
 ---
 
 Like many people, I use Emacs to edit my Haskell code.  The standard

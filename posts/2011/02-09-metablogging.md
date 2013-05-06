@@ -1,6 +1,7 @@
 ---
 title: Metablogging
 tags: haskell
+date: 2011-02-09
 ---
 
 In lieu of writing about something useful, I'll spend some words on

@@ -1,6 +1,7 @@
 ---
 title: Whole Program LLVM Bitcode
 tags: programming
+date: 2011-07-01
 ---
 
 Sometimes it is useful to be able to analyze an entire program at

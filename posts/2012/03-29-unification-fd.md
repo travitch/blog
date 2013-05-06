@@ -1,6 +1,7 @@
 ---
 title: Unification with unification-fd
 tags: haskell, llvm
+date: 2012-03-29
 ---
 
 I finally feel like a real programming languages person.  I just used

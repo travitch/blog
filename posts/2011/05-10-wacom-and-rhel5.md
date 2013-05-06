@@ -1,6 +1,7 @@
 ---
 title: Wacom Tablets and RHEL5
 tags: linux
+date: 2011-05-10
 ---
 
 I have been making my presentation slides in LaTeX Beamer for a few

@@ -1,6 +1,7 @@
 ---
 title: GHC and C++
 tags: haskell, programming, c++
+date: 2011-10-03
 ---
 
 Recently I was getting error messages from GHC while building Haskell

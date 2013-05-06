@@ -1,6 +1,7 @@
 ---
 title: TeX crossref Package
 tags: tex
+date: 2010-05-25
 ---
 
 A few days ago I was looking for a more robust type-aware

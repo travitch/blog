@@ -1,7 +1,7 @@
 ---
 title: Font Problems
 tags: linux, fonts
-date: 2003-03-06
+date: 2013-03-06
 ---
 
 I've been using [Adobe Source Code Pro](https://github.com/adobe/source-code-pro)

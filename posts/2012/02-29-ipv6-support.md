@@ -1,6 +1,7 @@
 ---
 title: IPv6 Support
 tags: linux
+date: 2012-02-29
 ---
 
 I enabled IPv6 on the machine hosting this blog a few months ago, but

@@ -1,6 +1,7 @@
 ---
 title: Freedesktop.org Notifications for Xmobar
 tags: haskell, linux
+date: 2010-10-25
 ---
 
 I am an XMonad user.  There, I said it.  I don't use any components of

@@ -1,6 +1,7 @@
 ---
 title: Debugging Haskell
 tags: haskell, programming
+date: 2011-04-19
 ---
 
 This is mostly just a note to myself.  Every time I get to the point

@@ -1,6 +1,7 @@
 ---
 title: Hackage and Haddock
 tags: haskell
+date: 2012-01-27
 ---
 
 It looks like the

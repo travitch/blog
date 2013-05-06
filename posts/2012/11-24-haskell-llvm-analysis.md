@@ -1,6 +1,7 @@
 ---
 title: Program Analysis with LLVM in Haskell
 tags: haskell, llvm
+date: 2012-11-24
 ---
 
 # Introduction

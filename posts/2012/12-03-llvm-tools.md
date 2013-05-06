@@ -1,6 +1,7 @@
 ---
 title: A Handy LLVM Tool (ViewIRGraph)
 tags: haskell, llvm, programming
+date: 2012-12-03
 ---
 
 I realized that I forgot to mention another repository related to my
