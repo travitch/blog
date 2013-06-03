@@ -14,5 +14,5 @@ cabal-version:       >=1.8
 executable blog
   main-is: blog.hs
   build-depends: base, time, old-locale,
-                 regex-tdfa, hakyll > 3
+                 regex-tdfa, hakyll >= 3.5 && < 4
   ghc-options: -Wall -fno-warn-unused-do-bind
