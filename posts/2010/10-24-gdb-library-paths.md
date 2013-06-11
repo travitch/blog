@@ -1,6 +1,7 @@
 ---
 title: GDB and Non-standard Library Paths
 tags: linux
+date: 2010-10-24
 ---
 
 This came up for the second time in five months yesterday, so I

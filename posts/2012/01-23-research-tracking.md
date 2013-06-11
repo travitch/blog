@@ -1,6 +1,7 @@
 ---
 title: Research Paper Tracking
 tags: research
+date: 2012-01-23
 ---
 
 The other day I saw someone mention

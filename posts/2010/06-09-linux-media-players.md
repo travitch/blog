@@ -1,6 +1,7 @@
 ---
 title: Linux Media Players
 tags: linux
+date: 2010-06-09
 ---
 
 Background

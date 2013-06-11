@@ -1,6 +1,7 @@
 ---
 title: Installing llvm-tools
 tags: haskell, programming, llvm
+date: 2012-12-04
 ---
 
 In my last post I neglected to provide installation instructions.

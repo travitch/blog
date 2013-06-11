@@ -1,6 +1,7 @@
 ---
 title: Another New Blog
 tags: haskell,python,programming
+date: 2010-05-24
 ---
 
 Why a blog?

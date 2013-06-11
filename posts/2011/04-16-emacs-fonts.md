@@ -1,6 +1,7 @@
 ---
 title: Emacs Fonts
 tags: linux, emacs
+date: 2011-04-16
 ---
 
 I keep forgetting to update this blog.  I feel bad about that; I

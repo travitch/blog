@@ -1,6 +1,7 @@
 ---
 title: Recent Bug Fixes
 tags: programming, linux
+date: 2011-09-08
 ---
 
 First, I finally went back and added support for clang in my

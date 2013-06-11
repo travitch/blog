@@ -1,6 +1,7 @@
 ---
 title: C++ Calling Conventions
 tags: c++, programming, compilers
+date: 2011-09-09
 ---
 
 My advisor presented me with an interesting problem the other day.

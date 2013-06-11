@@ -1,6 +1,7 @@
 ---
 title: Chili of the Deep
 tags: food
+date: 2012-02-20
 ---
 
 This weekend we had our annual chili party (coinciding with the Polar

@@ -1,6 +1,7 @@
 ---
 title: Blog Published to Github
 tags: programming
+date: 2012-03-02
 ---
 
 I just put the code for this blog up

@@ -1,6 +1,7 @@
 ---
 title: Browser Extensions
 tags: linux
+date: 2011-02-15
 ---
 
 I am not really a huge fan of browser extensions.  Most seem kind of

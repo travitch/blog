@@ -1,6 +1,7 @@
 ---
 title: An Emacs Function for LLVM Assembly
 tags: emacs
+date: 2012-11-07
 ---
 
 I finally decided to use the power of emacs to automate a task that I
