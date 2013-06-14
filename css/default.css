@@ -15,19 +15,44 @@ a:hover {
 
 .post-item {
     max-width: 6in;
-    margin: 20px 20px 50px 20px;
+    margin: 20px 20px 75px 20px;
     border-bottom: thin dashed #C2C2D6;
 }
 
+p {
+    font-family: 'Quattrocento', serif;
+    margin-bottom: 0;
+}
+
+p + p {
+    font-family: 'Quattrocento', serif;
+    margin-top: 1em;
+    text-indent: 2em;
+}
+
+.post-footer {
+    margin-top: 2em;
+}
+
+.post-content {
+    line-height: 1.5;
+}
+
 .post-content h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
     font-size: 1.5em;
 }
 
 .post-content h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
     font-size: 1.25em;
 }
 
 .post-content h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
     font-size: 1.1em;
 }
 
@@ -40,17 +65,10 @@ a:hover {
     margin: 20px 20px 50px 20px;
 }
 
-.post-date {
-    font-style: italic
-}
-
-.post-meta {
+.post-metadata {
     font-style: italic;
     font-size: 0.75em;
-}
-
-.post-tags {
-    float: right
+    float: right;
 }
 
 #disqus_thread {
@@ -67,7 +85,6 @@ a:hover {
     display: inline;
     padding: 0;
     margin: 0;
-/*    text-align: right;*/
 }
 
 #menu li {
@@ -76,25 +93,23 @@ a:hover {
   padding-right: 1em;
 }
 
-#archive-link {
-    float: right;
-    width: 2in;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    padding-right: 1em;
-    padding-bottom: 1em;
-}
-
-#archive-link ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: right
-}
-
 #tag-cloud {
     width: 4in
+}
+
+div#menu > ul > li > a {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+
+h1.post-item-title > a {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+}
+
+h1.post-title {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
 }
 
 .post-item-title > a {
@@ -105,7 +120,7 @@ a:hover {
     text-decoration: none;
 }
 
-.post-date, .post-tags, .post-tags > a {
+.post-metadata, .post-metadata > a {
     color: #aaaaaa;
     text-decoration: none;
 }
