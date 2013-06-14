@@ -20,12 +20,12 @@ a:hover {
 }
 
 p {
-    font-family: 'Quattrocento', serif;
+    font-family: 'Source Sans Pro', serif;
     margin-bottom: 0;
 }
 
 p + p {
-    font-family: 'Quattrocento', serif;
+    font-family: 'Source Sans Pro', serif;
     margin-top: 1em;
     text-indent: 2em;
 }
@@ -110,6 +110,11 @@ h1.post-item-title > a {
 h1.post-title {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 600;
+}
+
+code, pre.sourceCode {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.9em;
 }
 
 .post-item-title > a {
