@@ -2,22 +2,17 @@
 title: About
 ---
 
-My name is Tristan Ravitch and I am a Computer Science PhD student at
-the University of Wisconsin--Madison.  In practice, that means I just
-have fun with computers.  I finished my undergraduate degree at North
-Carolina State University in 2007.  Since then I have been working
-with Ben Liblit.
+My name is Tristan Ravitch and I am a software engineer in Portland,
+Oregon.  I got my PhD in Computer Science (studying Programming
+Languages) at the University of Wisconsin--Madison in 2013; my advisor
+was Ben Liblit.  I worked on using static analysis to promote language
+interoperability.  In particular, I analyzed C libraries to
+automatically generate idiomatic library bindings for high-level
+programming languages.  My undergraduate degree was in Computer
+Science at North Carolina State University.
 
-My area of interest is nominally Programming Languages.  That said,
-I don't really have much desire to make new languages.  Instead, I
-focus on program analysis.  Specifically, I am interested in:
-
- * Language interoperability
- * Promoting high-level language use
- * Finding bugs
- * Tools and techniques to improve program understanding
-
-For the record, here is a picture of me looking pretty cool at the Memorial
-Union Terrace:
+In my free time, I like to ride bicycles.  For the record, here is a
+picture of me looking pretty cool at the University of Wisconsin
+Memorial Union Terrace:
 
 ![Me](/images/tristan-terrace.jpg)
