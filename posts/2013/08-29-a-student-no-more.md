@@ -1,6 +1,6 @@
 ---
 title: A Student No More
-date: 08-29-2013
+date: 2013-08-29
 tags: other
 ---
 
