@@ -2,6 +2,7 @@
 title: Releasing datalog-0.2.0.2
 tags: haskell
 date: 2014-09-18
+updated: 2014-09-19
 ---
 
 I just released version 0.2.0.2 of my datalog library to
@@ -41,3 +42,11 @@ dependencies between relations) and evaluates the strata (partitions)
 bottom-up.  Embarrassingly enough, I was evaluating the strata
 top-down before this bug fix release.
 
+## Edit
+
+I misstated the exact nature of the bug fixed in the latest release.
+Strata were not being evaluated in the wrong order.  Instead, stratum
+*numbers* were being assigned in the wrong order.  Most of the time,
+the numbers were correct and thus rules were evaluated in the correct
+order.  However, in some cases, rules in the highest stratum would
+actually be assigned to the lowest.
