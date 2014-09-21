@@ -1,6 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Main ( main ) where
-import Control.Applicative
+import Control.Applicative ( (<$>) )
 import Data.Monoid ( (<>), mconcat )
 import Hakyll
 
