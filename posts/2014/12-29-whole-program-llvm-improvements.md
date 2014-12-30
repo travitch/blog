@@ -1,6 +1,6 @@
 ---
 title: whole-program-llvm Improvements
-date: 12-25-2014
+date: 2014-12-25
 tags: llvm
 ---
 
