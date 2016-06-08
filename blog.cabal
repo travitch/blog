@@ -11,5 +11,5 @@ cabal-version:       >=1.8
 
 executable blog
   main-is: site.hs
-  build-depends: base, hakyll >= 4.3 && < 5
+  build-depends: base, hakyll >= 4.7 && < 4.9
   ghc-options: -Wall -fno-warn-unused-do-bind
