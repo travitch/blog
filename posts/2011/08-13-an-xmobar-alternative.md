@@ -1,5 +1,5 @@
 ---
-title: Taffybar: An Xmobar Alternative
+title: "Taffybar: An Xmobar Alternative"
 tags: linux, haskell
 date: 2011-08-13
 ---

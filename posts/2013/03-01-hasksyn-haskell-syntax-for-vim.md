@@ -1,5 +1,5 @@
 ---
-title: hasksyn: Haskell Syntax for Vim
+title: "hasksyn: Haskell Syntax for Vim"
 tags: vim,haskell
 date: 2013-03-01
 ---
