@@ -10,7 +10,7 @@ defaultRecentCount = 10
 
 -- Pattern to pick up all posts
 postPattern :: Pattern
-postPattern = "posts/*/*.md"
+postPattern = "posts/*/*.md" .||. "posts/*/*.org"
 
 -- The key under which we store post contents
 contentSnapshot :: String
