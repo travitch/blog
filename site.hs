@@ -122,7 +122,6 @@ postList tags pattern sortFilter = do
 postListC :: Tags -> ([Item String] -> Compiler [Item String]) -> Compiler String
 postListC tags sortFilter = do
   posts <- sortFilter =<< loadAllSnapshots postPattern contentSnapshot
-  -- posts <- sortFilter =<< loadAll postPattern
   itemTpl <- loadBody "templates/postitem.html"
   applyTemplateList itemTpl (postCtx tags) posts
 
