@@ -130,7 +130,7 @@ feedConfig :: FeedConfiguration
 feedConfig = FeedConfiguration { feedTitle = "Tristan's Recent Posts"
                                , feedDescription = "Programming, Haskell, and Linux"
                                , feedAuthorName = "Tristan Ravitch"
-                               , feedAuthorEmail = "tristan@nochair.net"
-                               , feedRoot = "http://nochair.net"
+                               , feedAuthorEmail = "tristan@ravit.ch"
+                               , feedRoot = "http://ravit.ch"
                                }
 
