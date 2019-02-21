@@ -9,6 +9,10 @@ a {
     color: black;
 }
 
+.utterances {
+    margin: 0;
+}
+
 a:hover {
     text-decoration: none;
 }
