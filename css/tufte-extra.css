@@ -1,0 +1,39 @@
+/* The default x-height for code is slightly too large in side notes */
+.marginnote code, .sidenote code { font-size: 0.9rem; }
+
+/* A few custom things */
+
+.utterances {
+    margin: 0;
+}
+
+/* Don't decorate the top-level post list as a list */
+ul.post-list {
+    list-style-type: none
+}
+/* Styling for the top menu */
+#menu {
+  margin: 20px;
+}
+
+#menu ul {
+    list-style-type: none;
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+
+#menu li {
+  list-style-type: none;
+  display: inline;
+  padding-right: 1em;
+}
+
+#tag-cloud {
+    width: 4in
+}
+
+div#menu > ul > li > a {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}

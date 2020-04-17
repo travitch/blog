@@ -1,8 +1,11 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Main ( main ) where
-import Control.Applicative ( (<$>) )
-import Data.Monoid ( (<>), mconcat )
-import Hakyll
+
+import           Control.Applicative ( (<$>) )
+import           Data.Monoid ( (<>), mconcat )
+import           Hakyll
+
+import           SideNote ( usingSideNotes )
 
 -- How many posts to show in limited-space contexts
 defaultRecentCount :: Int
@@ -29,7 +32,7 @@ main = hakyll $ do
     -- A static about page
     match (fromList ["about.md"]) $ do
         route   $ setExtension "html"
-        compile $ pandocCompiler
+        compile $ pandocCompilerWithTransform  defaultHakyllReaderOptions defaultHakyllWriterOptions usingSideNotes
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
@@ -52,7 +55,7 @@ main = hakyll $ do
     -- This rule generates each individual post page
     match postPattern $ do
         route $ setExtension "html"
-        compile $ pandocCompiler
+        compile $ pandocCompilerWithTransform defaultHakyllReaderOptions defaultHakyllWriterOptions usingSideNotes
             >>= saveSnapshot contentSnapshot
             >>= loadAndApplyTemplate "templates/post.html"    (postCtx tags)
             >>= loadAndApplyTemplate "templates/default.html" (postCtx tags)

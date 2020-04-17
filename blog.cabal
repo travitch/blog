@@ -11,5 +11,11 @@ cabal-version:       >=1.8
 
 executable blog
   main-is: site.hs
-  build-depends: base, hakyll >= 4.12 && < 4.13
+  other-modules: SideNote
+  build-depends: base,
+                 mtl,
+                 text,
+                 pandoc,
+                 pandoc-types,
+                 hakyll >= 4.12 && < 4.14
   ghc-options: -Wall -Wcompat

@@ -1,6 +1,6 @@
 ---
 title: Emacs and Terminal Pasting
-tags: emacs linux
+tags: emacs, linux
 date: 2016-09-03
 ---
 
