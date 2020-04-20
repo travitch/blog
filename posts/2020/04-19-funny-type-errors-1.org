@@ -6,7 +6,7 @@ date: 2020-04-19
 
 I find that I run into a large number of what I would consider Funny Type Errors while using GHC.  This is the first post in what will presumably be a long series of posts on the topic.
 
-Today I was working on trying to improve the performance of a codebase that uses a large number of the type system extensions provided by modern GHC including ~-XGADTs~ and ~-XTypeInType~.  Seeing strange type errors in this code is expected on a daily basis.  However, the code I was working in today was not doing anything /too/ unusual.  A reduced example of the surprised is:
+Today I was working on trying to improve the performance of a codebase that uses a large number of the type system extensions provided by modern GHC including ~-XGADTs~ and ~-XTypeInType~.  Seeing strange type errors in this code is expected on a daily basis.  However, the code I was working in today was not doing anything /too/ unusual.  A reduced example of the surprising code is:
 
 #+BEGIN_SRC haskell
 {-# LANGUAGE GADTs #-}
