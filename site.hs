@@ -70,7 +70,7 @@ main = hakyll $ do
           posts <- constField "posts" <$> postList tags postPattern recentFirst
           let archiveCtx = mconcat [ posts
                                    , tagCloudField "tagcloud" 50 300 tags
-                                   , constField "title" "Archives"
+                                   , constField "title" "Tristan: Archives"
                                    , defaultContext
                                    ]
 
@@ -84,7 +84,7 @@ main = hakyll $ do
         route idRoute
         compile $ do
           posts <- constField "posts" <$> postListC tags takeRecent
-          let indexCtx = mconcat [ posts, constField "title" "Blog", defaultContext ]
+          let indexCtx = mconcat [ posts, constField "title" "Tristan: Blog", defaultContext ]
 
           makeItem ""
             >>= loadAndApplyTemplate "templates/index.html" indexCtx
