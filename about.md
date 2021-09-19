@@ -3,6 +3,7 @@ title: About
 ---
 
 My name is Tristan Ravitch. I am a Principal Researcher at [Galois](https://galois.com/) in Portland, Oregon. My research area is legacy systems understanding, assurance, and resilience. That work has involved static analysis and automated verification, with a focus on applying these techniques to binaries. Some of the technical artifacts I have worked on include:
+
 * Decoders and semantics for PowerPC and ARM
 * Modeling of operating system behaviors
 * Multi-architecture binary rewriting
