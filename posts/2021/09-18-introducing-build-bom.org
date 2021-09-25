@@ -40,7 +40,7 @@ To turn a C source file into LLVM IR, one usually uses ~clang~ with the ~-emit-l
 clang -emit-llvm -c foo.c -o foo.bc
 #+END_SRC
 
-That works well for a single source file, but creating LLVM IR for and entire program is more complicated. In fact, it is as complicated as the build system for the program, which can be arbitrarily complicated. In simple cases, one could modify the build system to generate LLVM IR instead of object files and then combine them into a single larger LLVM IR file using ~llvm-link~. Ideally, there would be a tool to make the process easier.
+That works well for a single source file, but creating LLVM IR for an entire program is more complicated. In fact, it is as complicated as the build system for the program, which can be arbitrarily complicated. In simple cases, one could modify the build system to generate LLVM IR instead of object files and then combine them into a single larger LLVM IR file using ~llvm-link~. Ideally, there would be a tool to make the process easier.
 
 ** Challenging Build Features
 
@@ -179,7 +179,7 @@ In contrast to ~wllvm~, ~build-bom~ does not invent a custom format for storing 
 
 Implementing ~build-bom~ was an interesting experience, as it shared some similarities with implementing a debugger.
 
-The system call tracing in ~build-bom~ is uses the ~ptrace~ system call on Linux[fn:linux-bsd-bom] through the excellent [[https://github.com/ranweiler/pete][pete]] library. In order to use ~ptrace~, at least in the way that ~build-bom~ requires:
+The system call tracing in ~build-bom~ uses the ~ptrace~ system call on Linux[fn:linux-bsd-bom] through the excellent [[https://github.com/ranweiler/pete][pete]] library. In order to use ~ptrace~, at least in the way that ~build-bom~ requires:
 
 1. The process to be traced (i.e., the build process) needs to invoke ~ptrace(PTRACE_TRACEME, ...)~ to halt the tracee and allow the tracer to attach
 2. The tracer (i.e., ~build-bom~) needs to invoke ~ptrace(PTRACE_ATTACH, ...)~ to attach to the tracee
@@ -212,7 +212,7 @@ Earlier in this post, I outlined a list of challenging build features that a gen
 
 ** Design Consequences
 
-Relying on ~ptrace~ to observe system calls issues by the build system serializes all of them through ~build-bom~. This significantly reduces the parallelism available in the build system (though processes still execute in parallel when not waiting in system calls).
+Relying on ~ptrace~ to observe system calls issued by the build system serializes all of them through ~build-bom~. This significantly reduces the parallelism available in the build system (though processes still execute in parallel when not waiting in system calls).
 
 The reliance on ~ptrace~ also ties ~build-bom~ to UNIX-like systems. This is not a hard limitation, as MacOS and Windows both support other mechanisms that would enable the same functionality. A ~build-bom~ backend can be implemented for any system with kernel support for debugging.
 - While MacOS has the ~ptrace~ system call, it is not fully-featured; MacOS debuggers require additional Mach system calls
@@ -227,7 +227,7 @@ The ~build-bom~ approach is less well-suited to builds where build commands are 
 There are a few major features that I plan to add to ~build-bom~ as they become needed:
 - *Support for response files* Response files are a feature provided by both ~gcc~ and ~clang~ to make it possible to pass in large numbers of arguments, especially on Windows[fn:response-files]. A response file simply records each argument to a process on its own line; ~build-bom~ would need to parse response files to determine the inputs and outputs of compilation commands.
 - *Support piped inputs* Currently ~build-bom~ does not work correctly with file inputs that are provided to the compiler via pipe. The original compilation command drains the pipe, leaving ~build-bom~ with no input file contents to pass to ~clang~ to generate bitcode. To fix this, ~build-bom~ will need to inspect input files and, if they are pipes, replace the pipe file with a temporary file on disk with the contents of the pipe[fn:argument-replacement].
-- *Support architectures besides x86_64* ~build-bom~ contains a hard-coded table mapping system call numbers to names to be matched on. Unfortunately, system call numbers differ across architectures on Linux. Adding support for new architectures is straightforward.
+- *Support architectures besides =x86_64=* ~build-bom~ contains a hard-coded table mapping system call numbers to names to be matched on. Unfortunately, system call numbers differ across architectures on Linux. Adding support for new architectures is straightforward.
 - *Support ELF modification via library* To attach LLVM IR to an object file, ~build-bom~ calls the ~objcopy~ binary, which it assumes is installed on the system. Using a library to read and write ELF files would reduce the run-time dependency footprint.
 - *Support for Windows and MacOS* Extending support to Windows and MacOS requires understanding the necessary debugging system calls, but is not conceptually difficult.
 - *Support for arbitrary build command interposition* Currently, ~build-bom~ runs extra commands to generate LLVM IR. It is a small delta to being able to arbitrarily modify build commands. I envision a ~sed~/~awk~-like interface for matching and rewriting command line arguments. Potential uses include, but are not limited to:
