@@ -1,5 +1,5 @@
 ---
-title: Release: haggle-0.2
+title: Releasing haggle-0.2
 tags: haggle, haskell, data-structures
 date: 2022-05-08
 ---
