@@ -17,5 +17,5 @@ executable blog
                  text,
                  pandoc,
                  pandoc-types,
-                 hakyll >= 4.12 && < 4.14
+                 hakyll >= 4.12 && < 4.16
   ghc-options: -Wall -Wcompat
