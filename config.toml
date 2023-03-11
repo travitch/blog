@@ -1,0 +1,40 @@
+# The URL the site will be built for
+base_url = "https://ravit.ch"
+
+title = "Tristan.Blog"
+default_language = "en"
+
+minify_html = false
+generate_feed = true
+feed_filename = "rss.xml"
+feed_limit = 25
+
+taxonomies = [
+  {name = "tags", feed = true}
+]
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+highlight_theme = "solarized-light"
+
+[slugify]
+paths_keep_dates = true
+
+
+[extra]
+# Put all your custom variables here
+author = "Tristan Ravitch"
+links = [
+  { name = "About Me", url = "/about" },
+  { name = "Research", url = "/research" },
+  { name = "GitHub", url = "https://github.com/travitch" },
+  { name = "RSS", url = "/rss.xml" }
+]

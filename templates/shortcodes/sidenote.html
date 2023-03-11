@@ -1,0 +1,6 @@
+<sup><a href="#sidenote-{{ nth }}">{{ nth }}</a></sup><span class="sidenote" id="sidenote-{{ nth }}">
+    <sup>{{ nth }}</sup>
+    <small>
+        {{ body | markdown(inline=true) | safe }}
+    </small>
+</span>

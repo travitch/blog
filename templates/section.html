@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+
+{% block content %}
+<div class="posts">
+    {% for page in paginator.pages %}
+        <article class="post">
+            <h2><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
+            <div class="post__summary">
+                {%- if page.summary %}
+                  {{ page.summary | safe }}
+                {%- elif page.content %}
+                  {{ page.content | striptags | truncate(length=150) | safe }}
+                {%- endif %}
+            </div>
+            <div class="read-more">
+                <a href="{{ page.permalink }}">Read more...</a>
+            </div>
+        </article>
+    {% endfor %}
+</div>
+<nav class="pagination">
+    {% if paginator.previous %}
+        <a class="previous" href="{{ paginator.previous }}">‹ Previous</a>
+    {% endif %}
+    {% if paginator.next %}
+        <a class="next" href="{{ paginator.next }}">Next ›</a>
+    {% endif %}
+</nav>
+{% endblock content %}

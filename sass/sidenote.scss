@@ -1,0 +1,30 @@
+.sidenote {
+    font-size: 80%;
+    position: relative;
+}
+
+/* Wide viewport */
+@media (min-width: 1400px) {
+    .sidenote {
+        float: right;
+        clear: right;
+        margin-right: -23vw;
+        text-align: left;
+
+        top: -3rem;
+        width: 20vw;
+        margin-top: 1rem;
+    }
+}
+
+/* Narrow viewport */
+@media (max-width: 1400px) {
+    .sidenote {
+        float: right;
+        text-align: right;
+
+        width: 100%;
+        margin: 1rem 0;
+        padding-left: 15%;
+    }
+}

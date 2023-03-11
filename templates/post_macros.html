@@ -1,0 +1,16 @@
+{% macro page_in_list(page) %}
+                    <header class="entry-header">
+                        <h2>{{ page.title }}</h2>
+                    </header>
+                    <section class=entry-content>
+                    {%- if page.summary %}
+                        {{ page.summary | safe }}
+                    {%- elif page.content %}
+                        {{ page.content | striptags | truncate(length=500) | safe }}
+                    {%- endif %}
+                    </section>
+                    <footer class="entry-footer">
+                        <time>{{ page.date | date(format="%B %e, %Y") }}</time>
+                    </footer>
+                    <a class="entry-link" href="{{ page.permalink }}"></a>
+{% endmacro page_in_list %}
