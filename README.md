@@ -1,0 +1,1 @@
+This is the content for my blog, hosted at [ravit.ch](https://ravit.ch).  It is built on [Zola](https://getzola.org) and uses a somewhat hacked-up version of the [zola-paper theme](https://github.com/schoenenberg/zola-paper).
