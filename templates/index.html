@@ -92,10 +92,6 @@
 
         <footer class="footer">
             <span>&copy; {{ now() | date(format="%Y") }} <a href="{{ get_url(path="", trailing_slash=false ) }}">{{ config.title }}</a></span>
-            <span>&middot;</span>
-            <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a>️</span>
-            <span>&middot;</span>
-            <span>Theme️ <a href="https://github.com/schoenenberg/zola-paper" rel="noopener" target="_blank">Zola-Paper</a></span>
         </footer>
     {% endblock body %}
     </body>
